@@ -1,0 +1,348 @@
+<!DOCTYPE html><html class="theme-next pisces use-motion" lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta name="theme-color" content="#222"><script src="/lib/pace/pace.min.js?v=1.0.2"></script><link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"><link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css"><link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css"><link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4"><link rel="icon" type="image/png" sizes="32x32" href="https://xl-head-portrait-1300729795.cos.ap-chengdu.myqcloud.com/favicon.ico?v=5.1.4"><link rel="icon" type="image/png" sizes="16x16" href="https://xl-head-portrait-1300729795.cos.ap-chengdu.myqcloud.com/favicon.ico?v=5.1.4"><link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222"><meta name="keywords" content="hexo,"><link rel="alternate" href="/atom.xml" title="小石头's Blog" type="application/atom+xml"><meta name="description" content="一.导语1.本文的主要内容：如何搜索引擎可以搜索到我们的博客 2.准备： 什么是 SEO ？SEO是由英文Search Engine Optimization缩写而来， 中文意译为“搜索引擎优化”。SEO是指通过站内优化比如网站结构调整、网站内容建设、网站代码优化等以及站外优化。  部署到 Github 上的缺点？  Github是不允许百度的爬虫爬取内容的，所以我们的项目如果是托管在github"><meta property="og:type" content="article"><meta property="og:title" content="Hexo问题-提交站点给搜索引擎以及SEO"><meta property="og:url" content="http://fanandjiu.com/Hexo%E9%97%AE%E9%A2%98-%E6%8F%90%E4%BA%A4%E7%AB%99%E7%82%B9%E7%BB%99%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E4%BB%A5%E5%8F%8ASEO/index.html"><meta property="og:site_name" content="小石头&#39;s Blog"><meta property="og:description" content="一.导语1.本文的主要内容：如何搜索引擎可以搜索到我们的博客 2.准备： 什么是 SEO ？SEO是由英文Search Engine Optimization缩写而来， 中文意译为“搜索引擎优化”。SEO是指通过站内优化比如网站结构调整、网站内容建设、网站代码优化等以及站外优化。  部署到 Github 上的缺点？  Github是不允许百度的爬虫爬取内容的，所以我们的项目如果是托管在github"><meta property="og:image" content="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/seo/QQ20200203-144112%402x.png"><meta property="og:image" content="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/seo/QQ20200203-144347%402x.png"><meta property="og:image" content="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/seo/QQ20200203-193801%402x.png"><meta property="og:image" content="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/seo/QQ20200203-194152%402x.png"><meta property="og:image" content="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/seo/QQ20200203-175258%402x.png"><meta property="og:image" content="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/seo/gitee/google/QQ%E6%88%AA%E5%9B%BE20191212225326.png"><meta property="og:image" content="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/seo/gitee/google/QQ%E6%88%AA%E5%9B%BE20191212225426.png"><meta property="og:image" content="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/seo/gitee/google/QQ%E6%88%AA%E5%9B%BE20191212232151.png"><meta property="og:image" content="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/seo/QQ20200203-183159%402x.png"><meta property="og:image" content="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/seo/QQ20200203-193054%402x.png"><meta property="og:image" content="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/seo/QQ20200203-193157%402x.png"><meta property="og:image" content="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/seo/gitee/baidu/QQ%E6%88%AA%E5%9B%BE20191213001141.png"><meta property="og:image" content="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/seo/gitee/baidu/QQ%E6%88%AA%E5%9B%BE20191212201602.png"><meta property="og:image" content="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/seo/gitee/baidu/QQ%E6%88%AA%E5%9B%BE20191212202127.png"><meta property="og:image" content="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/seo/gitee/baidu/QQ%E6%88%AA%E5%9B%BE20191212202208.png"><meta property="og:image" content="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/seo/QQ20200203-200748%402x.png"><meta property="og:image" content="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/seo/QQ20200203-201212%402x.png"><meta property="og:image" content="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/seo/QQ20200203-200442%402x.png"><meta property="og:image" content="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/blog-coding/seo/QQ20200206-232534%402x.png"><meta property="og:image" content="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/blog-coding/seo/QQ20200206-232602%402x.png"><meta property="og:image" content="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/blog-coding/seo/QQ20200206-232750%402x.png"><meta property="og:image" content="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/blog-coding/seo/QQ20200206-235036%402x.png"><meta property="og:image" content="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/blog-coding/seo/QQ20200206-223226%402x.png"><meta property="og:image" content="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/blog-coding/seo/QQ20200206-234409%402x.png"><meta property="og:image" content="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/blog-coding/seo/QQ20200206-234003%402x.png"><meta property="og:image" content="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/seo/gitee/baidu/baidusitemap/QQ%E6%88%AA%E5%9B%BE20191212211611.png"><meta property="og:image" content="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/seo/gitee/baidu/baidusitemap/QQ%E6%88%AA%E5%9B%BE20191212233551.png"><meta property="og:image" content="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/seo/QQ20200203-211535%402x.png"><meta property="og:image" content="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/blog-coding/seo/QQ20200206-223351%402x.png"><meta property="article:published_time" content="2020-02-03T06:02:05.000Z"><meta property="article:modified_time" content="2020-06-04T12:43:13.730Z"><meta property="article:author" content="小石头"><meta property="article:tag" content="hexo"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/seo/QQ20200203-144112%402x.png"><script type="text/javascript" id="hexo.configurations">var NexT=window.NexT||{},CONFIG={root:"/",scheme:"Pisces",version:"5.1.4",sidebar:{position:"left",display:"post",offset:0,b2t:!0,scrollpercent:!0,onmobile:!0},fancybox:!0,tabs:!0,motion:{enable:!0,async:!1,transition:{post_block:"fadeIn",post_header:"slideDownIn",post_body:"slideDownIn",coll_header:"slideLeftIn",sidebar:"slideUpIn"}},duoshuo:{userId:"0",author:"博主"},algolia:{applicationID:"",apiKey:"",indexName:"",hits:{per_page:10},labels:{input_placeholder:"Search for Posts",hits_empty:"We didn't find any results for the search: ${query}",hits_stats:"${hits} results found in ${time} ms"}}}</script><link rel="canonical" href="http://fanandjiu.com/Hexo问题-提交站点给搜索引擎以及SEO/"><title>Hexo问题-提交站点给搜索引擎以及SEO | 小石头's Blog</title><meta name="generator" content="Hexo 4.2.1"></head><body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans"><div class="container sidebar-position-left page-post-detail"><div class="headband"></div><header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="header-inner"><div class="site-brand-wrapper"><div class="site-meta"><div class="custom-logo-site-title"><a href="/" class="brand" rel="start"><span class="logo-line-before"><i></i></span> <span class="site-title">小石头's Blog</span><span class="logo-line-after"><i></i></span></a></div><p class="site-subtitle">成功来源于每一次的坚持</p></div><div class="site-nav-toggle"> <button><span class="btn-bar"></span><span class="btn-bar"></span><span class="btn-bar"></span></button></div></div><nav class="site-nav"><ul id="menu" class="menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i><br> 首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i><br> 标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i><br> 分类</a></li><li class="menu-item menu-item-search"><a href="javascript:;" class="popup-trigger"><i class="menu-item-icon fa fa-search fa-fw"></i><br> 搜索</a></li></ul><div class="site-search"><div class="popup search-popup local-search-popup"><div class="local-search-header clearfix"><span class="search-icon"><i class="fa fa-search"></i></span><span class="popup-btn-close"><i class="fa fa-times-circle"></i></span><div class="local-search-input-wrapper"> <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input"></div></div><div id="local-search-result"></div></div></div></nav></div></header><main id="main" class="main"><div class="main-inner"><div class="content-wrap"><div id="content" class="content"><div id="posts" class="posts-expand"><article class="post post-type-normal" itemscope itemtype="http://schema.org/Article"><div class="post-block"><link itemprop="mainEntityOfPage" href="http://fanandjiu.com/Hexo%E9%97%AE%E9%A2%98-%E6%8F%90%E4%BA%A4%E7%AB%99%E7%82%B9%E7%BB%99%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E4%BB%A5%E5%8F%8ASEO/"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="name" content="小石头"><meta itemprop="description" content=""><meta itemprop="image" content="https://xl-head-portrait-1300729795.cos.ap-chengdu.myqcloud.com/acatar.jpg"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="小石头's Blog"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">Hexo问题-提交站点给搜索引擎以及SEO</h1><div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i></span> <span class="post-meta-item-text">发表于</span> <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-03T14:02:05+08:00">2020-02-03</time></span> <span class="post-category"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-folder-o"></i></span> <span class="post-meta-item-text">分类于</span> <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/hexo%E9%85%8D%E7%BD%AE/" itemprop="url" rel="index"><span itemprop="name">hexo配置</span></a></span></span> <span class="post-comments-count"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-comment-o"></i></span><a href="/Hexo%E9%97%AE%E9%A2%98-%E6%8F%90%E4%BA%A4%E7%AB%99%E7%82%B9%E7%BB%99%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E4%BB%A5%E5%8F%8ASEO/#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/Hexo%E9%97%AE%E9%A2%98-%E6%8F%90%E4%BA%A4%E7%AB%99%E7%82%B9%E7%BB%99%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E4%BB%A5%E5%8F%8ASEO/" itemprop="commentCount"></span></a></span> <span id="/Hexo%E9%97%AE%E9%A2%98-%E6%8F%90%E4%BA%A4%E7%AB%99%E7%82%B9%E7%BB%99%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E4%BB%A5%E5%8F%8ASEO/" class="leancloud_visitors" data-flag-title="Hexo问题-提交站点给搜索引擎以及SEO"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-eye"></i></span> <span class="post-meta-item-text">热度&#58;</span><span class="leancloud-visitors-count"></span> <span>℃</span></span><div class="post-wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span> <span class="post-meta-item-text">字数统计&#58;</span> <span title="字数统计">1.4k 字</span> <span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span> <span class="post-meta-item-text">阅读时长 &asymp;</span> <span title="阅读时长">5 分钟</span></div></div></header><div class="post-body" itemprop="articleBody"><h3 id="一-导语"><a href="#一-导语" class="headerlink" title="一.导语"></a>一.导语</h3><h4 id="1-本文的主要内容："><a href="#1-本文的主要内容：" class="headerlink" title="1.本文的主要内容："></a>1.本文的主要内容：</h4><p>如何搜索引擎可以搜索到我们的博客</p><h4 id="2-准备："><a href="#2-准备：" class="headerlink" title="2.准备："></a>2.准备：</h4><ul><li><p><strong>什么是 SEO ？</strong><br>SEO是由英文Search Engine Optimization缩写而来， 中文意译为“搜索引擎优化”。SEO是指通过站内优化比如网站结构调整、网站内容建设、网站代码优化等以及站外优化。</p></li><li><p><strong>部署到 Github 上的缺点？</strong><br> Github是不允许百度的爬虫爬取内容的，所以我们的项目如果是托管在github上的话基本是不会被百度收录的。所以，我之前的测试一直是不行的。</p></li><li><p><strong>站点地图sitemap？</strong></p><p> 之前配置Next主题样式的时候已经生成了通用的sitemap和百度搜索引擎用的sitemap。不知道的可以看主Next主题样式那一篇文章。我的两个地址分别是<a href="https://fanandjiu.com/sitemap.xml">https://fanandjiu.com/sitemap.xml</a> 和 <a href="https://fanandjiu.com/baidusitemap.xml">https://fanandjiu.com/baidusitemap.xml</a> 。</p></li></ul><h3 id="二-让谷歌搜索引擎收录我们的站点"><a href="#二-让谷歌搜索引擎收录我们的站点" class="headerlink" title="二.让谷歌搜索引擎收录我们的站点"></a>二.让谷歌搜索引擎收录我们的站点</h3><p><strong>1.先说谷歌的原因是：相比于百度，谷歌的效率是真的高问题少，重点是Github允许爬取。</strong></p><p><strong>2.流程：</strong></p><p><strong>①. 打开 <a href="https://www.google.com/webmasters/" target="_blank" rel="noopener">google站点平台</a>，登录，验证站点。我们选择网域，输入域名，选择继续。</strong></p><p><img src="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/seo/QQ20200203-144112%402x.png" alt=""></p><p><img src="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/seo/QQ20200203-144347%402x.png" alt=""></p><p><strong>②. 通过DNS进行验证，一般打开域名提供商，在域名解析里面添加一条记录（各项值如图所示）。一般都是等待十分钟后点击验证，验证成功点击前往资源页面。</strong></p><p><img src="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/seo/QQ20200203-193801%402x.png" alt=""></p><p><img src="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/seo/QQ20200203-194152%402x.png" alt=""></p><p><img src="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/seo/QQ20200203-175258%402x.png" alt=""></p><p><strong>③. 提交sitemap</strong><img src="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/seo/gitee/google/QQ%E6%88%AA%E5%9B%BE20191212225326.png" alt=""></p><p><img src="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/seo/gitee/google/QQ%E6%88%AA%E5%9B%BE20191212225426.png" alt=""></p><p><img src="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/seo/gitee/google/QQ%E6%88%AA%E5%9B%BE20191212232151.png" alt=""></p><p><strong>④. 提交sitemap之后，很快就能被搜索到了。我先用了 <code>site:域名</code> 来测试是否站点是否被收录，然后又搜索了内容和图片。</strong></p><p><img src="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/seo/QQ20200203-183159%402x.png" alt=""></p><p><img src="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/seo/QQ20200203-193054%402x.png" alt=""></p><p><img src="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/seo/QQ20200203-193157%402x.png" alt=""></p><h3 id="三-让百度搜索引擎收录我们的站点"><a href="#三-让百度搜索引擎收录我们的站点" class="headerlink" title="三.让百度搜索引擎收录我们的站点"></a>三.让百度搜索引擎收录我们的站点</h3><h4 id="1-让百度收录我们的站点，两种方式。"><a href="#1-让百度收录我们的站点，两种方式。" class="headerlink" title="1.让百度收录我们的站点，两种方式。"></a>1.让百度收录我们的站点，两种方式。</h4><p><strong>①. 浏览器输入site:域名，点击提交网址给我们，也可以用来检测一个网站是否被收入站点</strong></p><p><img src="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/seo/gitee/baidu/QQ%E6%88%AA%E5%9B%BE20191213001141.png" alt=""></p><p><strong>②. 点击<a href="https://ziyuan.baidu.com/" target="_blank" rel="noopener">百度搜索资源平台</a>-&gt;用户中心-&gt;站点管理-&gt;添加网站。</strong></p><p><img src="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/seo/gitee/baidu/QQ%E6%88%AA%E5%9B%BE20191212201602.png" alt=""></p><h4 id="2-验证网站所有权"><a href="#2-验证网站所有权" class="headerlink" title="2.验证网站所有权"></a>2.验证网站所有权</h4><p><strong>①. 输入网站</strong></p><p><img src="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/seo/gitee/baidu/QQ%E6%88%AA%E5%9B%BE20191212202127.png" alt=""></p><p><strong>②. 站点属性</strong></p><p><img src="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/seo/gitee/baidu/QQ%E6%88%AA%E5%9B%BE20191212202208.png" alt=""></p><p><strong>③. 验证网站—选择的是 CNAME验证 方式。一般回告诉你这句话`请将 BdvNH1CQPw.****</strong>.com 使用CNAME解析到ziyuan.baidu.com` 。那么打开域名解析网站添加一条记录，主机记录值填 BdvNH1CQPw 这一段，记录类型值填 CNAME 。记录值填 ziyuan.baidu.com 这一段。**</p><p><img src="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/seo/QQ20200203-200748%402x.png" alt=""></p><p><img src="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/seo/QQ20200203-201212%402x.png" alt=""></p><p><img src="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/seo/QQ20200203-200442%402x.png" alt=""></p><h4 id="3-提交sitemap"><a href="#3-提交sitemap" class="headerlink" title="3.提交sitemap"></a>3.提交sitemap</h4><p><strong>①. 将我们生成的sitemap文件提交给百度，有两种提交方式，自动提交和手动提交（不建议），自动提交又分为主动推送、自动推送和sitemap。</strong></p><p><strong>②. 设置主动推送：我使用的是 <code>curl</code>，Mac平台已经帮我们准备好了，无需安装。根据百度推送的文档描述，我们需要将要提交的链接按照每行一条的格式写入一个文本文件中，命名此文件为urls.txt，然后进入该文件所在目录，执行如下命令：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -H &#39;Content-Type:text&#x2F;plain&#39; --data-binary @urls.txt &quot;http:&#x2F;&#x2F;data.zz.baidu.com&#x2F;urls?site&#x3D;fanandjiu.com&amp;token&#x3D;aw2T5HkRFBhCyakx&quot;</span><br></pre></td></tr></table></figure><br><p><img src="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/blog-coding/seo/QQ20200206-232534%402x.png" alt=""></p><p><img src="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/blog-coding/seo/QQ20200206-232602%402x.png" alt=""></p><p><img src="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/blog-coding/seo/QQ20200206-232750%402x.png" alt=""></p><p><img src="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/blog-coding/seo/QQ20200206-235036%402x.png" alt=""></p><p><strong>③. 设置自动推送，由于<code>NexT</code>主题帮我们配置了“每次访问博客中的页面就会自动向百度提交sitemap”的代码，我们只需要打开 <code>主题配置文件</code>，搜索<code>baidu_push</code>，将值改为<code>true</code>即可。有的博客会说需要打开 <code>themes\next\layout_third-party\se\baidu_push.swig</code> 文件，添加百度自动推送提供的代码，但是NexT主题已经添加了，可以看下面的截图。</strong></p><p><img src="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/blog-coding/seo/QQ20200206-223226%402x.png" alt=""></p><p><img src="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/blog-coding/seo/QQ20200206-234409%402x.png" alt=""></p><p><img src="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/blog-coding/seo/QQ20200206-234003%402x.png" alt=""></p><p><strong>④. 设置sitemap，打开<a href="https://ziyuan.baidu.com/" target="_blank" rel="noopener">百度站长平台</a>，网站支持-&gt;链接提交-&gt;自动提交-&gt;sitemap，输入你生成的百度sitemap的网址。</strong></p><p><img src="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/seo/gitee/baidu/baidusitemap/QQ%E6%88%AA%E5%9B%BE20191212211611.png" alt=""></p><p><img src="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/seo/gitee/baidu/baidusitemap/QQ%E6%88%AA%E5%9B%BE20191212233551.png" alt=""></p><p><img src="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/seo/QQ20200203-211535%402x.png" alt=""></p><p><strong>⑤. 如上图所示，文件的抓取状态会一直是 抓取失败，为什么呢？ 因为之前提到过，Github 不允许百度的爬虫爬取，难搞哦，以后用自己的服务器再说吧。</strong></p><h3 id="四-SEO"><a href="#四-SEO" class="headerlink" title="四. SEO"></a>四. SEO</h3><p><strong>1. 提交 robots.txt</strong></p><p>robots.txt 是一种存放于网站根目录下的 ASCII 编码的文本文件，它的作用是告诉搜索引擎此网站中哪些内容是可以被爬取的，哪些是禁止爬取的。robots.txt 放在博客目录下的 source 文件夹中，博客生成后在站点目录 /public/ 下。</p><p>我的robots.txt的内容如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">User-agent: *</span><br><span class="line">Allow: &#x2F;</span><br><span class="line">Allow: &#x2F;archives&#x2F;</span><br><span class="line">Allow: &#x2F;categories&#x2F;</span><br><span class="line">Allow: &#x2F;tags&#x2F;</span><br><span class="line">Disallow: &#x2F;js&#x2F;</span><br><span class="line">Disallow: &#x2F;css&#x2F;</span><br><span class="line">Disallow: &#x2F;fonts&#x2F;</span><br><span class="line">Disallow: &#x2F;vendors&#x2F;</span><br></pre></td></tr></table></figure><br><p><strong>2.优化url</strong></p><p>seo搜索引擎优化认为，网站的最佳结构是用户从首页点击三次就可以到达任何一个页面，但是我们使用hexo编译的站点打开文章的url是：sitename/year/mounth/day/title四层的结构，这样的url结构很不利于seo，爬虫就会经常爬不到我们的文章，于是，我们需要优化一下网站文章url</p><p>我们可以将url直接改成sitename/title的形式，并且title最好是用英文，在<code>站点配置文件</code>下搜索<code>url</code>修改<code>permalink</code>（原本的值：permalink: :year/:month/:day/:title/）如下：</p><p><img src="https://xiaoshitou-blog-1300729795.cos.ap-chongqing.myqcloud.com/mac/blog-coding/seo/QQ20200206-223351%402x.png" alt=""></p><h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><p><strong><a href="https://www.jianshu.com/p/b05766500bf9" target="_blank" rel="noopener">SEO优化-robots.txt解读</a></strong></p><p><strong><a href="https://blog.csdn.net/lzy98/article/details/81140704" target="_blank" rel="noopener">HEXO SEO 高级优化</a></strong></p><p><strong><a href="https://www.jianshu.com/p/a97f0ecb0c96" target="_blank" rel="noopener">解决百度蜘蛛无法爬取 Hexo 博客的问题</a></strong></p><p><strong><a href="https://www.jianshu.com/p/29d9eed79ad8" target="_blank" rel="noopener">hexo: windows下向百度站长平台主动推送链接</a>—此文章有windows平台curl安装的示例</strong></p><p><strong><a href="https://www.jianshu.com/p/1ff2fcbdd155" target="_blank" rel="noopener">Hexo博客第三方主题next进阶教程</a>—此文章有文件验证如何避免验证的html被编译</strong></p></div><div><div style="padding:10px 0;margin:20px auto;width:90%;text-align:center"><div>Donate comment here</div> <button id="rewardButton" disable="enable" onclick='var qr=document.getElementById("QR");"none"===qr.style.display?qr.style.display="block":qr.style.display="none"'> <span>打赏</span></button><div id="QR" style="display:none"><div id="wechat" style="display:inline-block"> <img id="wechat_qr" src="/images/wechatpay.jpg" alt="小石头 微信支付"><p>微信支付</p></div><div id="alipay" style="display:inline-block"> <img id="alipay_qr" src="/images/alipay.jpg" alt="小石头 支付宝"><p>支付宝</p></div></div></div></div><div><div class="my_post_copyright"><script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script><script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script><script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script><p><span>本文标题:</span><a href="/Hexo%E9%97%AE%E9%A2%98-%E6%8F%90%E4%BA%A4%E7%AB%99%E7%82%B9%E7%BB%99%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E4%BB%A5%E5%8F%8ASEO/">Hexo问题-提交站点给搜索引擎以及SEO</a></p><p><span>文章作者:</span><a href="/" title="访问 小石头 的个人博客">小石头</a></p><p><span>发布时间:</span>2020年02月03日 - 14:02</p><p><span>最后更新:</span>2020年06月04日 - 20:43</p><p><span>原始链接:</span><a href="/Hexo%E9%97%AE%E9%A2%98-%E6%8F%90%E4%BA%A4%E7%AB%99%E7%82%B9%E7%BB%99%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E4%BB%A5%E5%8F%8ASEO/" title="Hexo问题-提交站点给搜索引擎以及SEO">http://fanandjiu.com/Hexo%E9%97%AE%E9%A2%98-%E6%8F%90%E4%BA%A4%E7%AB%99%E7%82%B9%E7%BB%99%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E4%BB%A5%E5%8F%8ASEO/</a><span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://fanandjiu.com/Hexo%E9%97%AE%E9%A2%98-%E6%8F%90%E4%BA%A4%E7%AB%99%E7%82%B9%E7%BB%99%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E4%BB%A5%E5%8F%8ASEO/" aria-label="复制成功！"></i></span></p><p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p></div><script>var clipboard=new Clipboard(".fa-clipboard");$(".fa-clipboard").click(function(){clipboard.on("success",function(){swal({title:"",text:"复制成功",icon:"success",showConfirmButton:!0})})})</script></div><div><div><div style="text-align:center;color:#ccc;font-size:14px"> -------------本文结束<i class="fa fa-paw"></i> 感谢您的阅读-------------</div></div></div><footer class="post-footer"><div class="post-tags"><a href="/tags/hexo/" rel="tag"><i class="fa fa-tag"></i> hexo</a></div><div class="post-nav"><div class="post-nav-next post-nav-item"><a href="/Hexo%E9%97%AE%E9%A2%98-%E4%BC%98%E5%8C%96Hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%89%93%E5%BC%80%E9%80%9F%E5%BA%A6/" rel="next" title="Hexo问题-优化Hexo博客的打开速度"><i class="fa fa-chevron-left"></i> Hexo问题-优化Hexo博客的打开速度</a></div><span class="post-nav-divider"></span><div class="post-nav-prev post-nav-item"> <a href="/Hexo%E9%97%AE%E9%A2%98-Mac%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9F%90%E4%BA%9B%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/" rel="prev" title="Hexo问题-Mac操作系统某些软件的安装">Hexo问题-Mac操作系统某些软件的安装<i class="fa fa-chevron-right"></i></a></div></div></footer></div></article><div class="post-spread"></div></div></div><div class="comments" id="comments"></div></div><div class="sidebar-toggle"><div class="sidebar-toggle-line-wrap"><span class="sidebar-toggle-line sidebar-toggle-line-first"></span><span class="sidebar-toggle-line sidebar-toggle-line-middle"></span><span class="sidebar-toggle-line sidebar-toggle-line-last"></span></div></div><aside id="sidebar" class="sidebar"><div id="sidebar-dimmer"></div><div class="sidebar-inner"><ul class="sidebar-nav motion-element"><li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap"> 文章目录</li><li class="sidebar-nav-overview" data-target="site-overview-wrap"> 站点概览</li></ul><section class="site-overview-wrap sidebar-panel"><div class="site-overview"><div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person"> <img class="site-author-image" itemprop="image" src="https://xl-head-portrait-1300729795.cos.ap-chengdu.myqcloud.com/acatar.jpg" alt="小石头"><p class="site-author-name" itemprop="name">小石头</p><p class="site-description motion-element" itemprop="description">Life = Coding</p></div><nav class="site-state motion-element"><div class="site-state-item site-state-posts"> <a href="/archives"><span class="site-state-item-count">238</span> <span class="site-state-item-name">日志</span></a></div><div class="site-state-item site-state-categories"> <a href="/categories/index.html"><span class="site-state-item-count">11</span> <span class="site-state-item-name">分类</span></a></div><div class="site-state-item site-state-tags"> <a href="/tags/index.html"><span class="site-state-item-count">27</span> <span class="site-state-item-name">标签</span></a></div></nav><div class="feed-link motion-element"><a href="/atom.xml" rel="alternate"><i class="fa fa-rss"></i> RSS</a></div><div class="links-of-author motion-element"><span class="links-of-author-item"><a href="https://github.com/xiaoshitounen" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i> GitHub</a></span><span class="links-of-author-item"><a href="https://gitee.com/xuxiaoshi" target="_blank" title="Gitee"><i class="fa fa-fw fa-free-code-camp"></i> Gitee</a></span><span class="links-of-author-item"><a href="https://xiaoshitounen.coding.net/admin/overview" target="_blank" title="Coding"><i class="fa fa-fw fa-file-code-o"></i> Coding</a></span><span class="links-of-author-item"><a href="https://www.jianshu.com/u/031c0a19d4a2" target="_blank" title="简书"><i class="fa fa-fw fa-heartbeat"></i> 简书</a></span></div><div class="links-of-blogroll motion-element links-of-blogroll-block"><div class="links-of-blogroll-title"><i class="fa fa-fw fa-link"></i> 推荐</div> <a href="https://www.showdoc.cc/" title="在线Api文档" target="_blank">在线Api文档</a> <a href="https://www.showdoc.cc/" title="在线作图" target="_blank">在线作图</a> <a href="http://www.atool9.com/colorpicker.php" title="在线颜色选择" target="_blank">在线颜色选择</a> <a href="https://www.iconfont.cn/" title="阿里巴巴矢量图标" target="_blank">阿里巴巴矢量图标</a> <a href="https://www.aconvert.com/cn/" title="在线转换" target="_blank">在线转换</a> <a href="http://tool.chinaz.com/tools/diff" title="文本对比" target="_blank">文本对比</a> <a href="https://www.ubuuk.com/" title="设计" target="_blank">设计</a> <a href="https://www.photopea.com/" title="在线PhotoShop" target="_blank">在线PhotoShop</a> <a href="https://tool.oschina.net/codeformat/json" title="代码格式化" target="_blank">代码格式化</a> <a href="https://smallpdf.com/cn" title="PDF转换" target="_blank">PDF转换</a></div></div></section><section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active"><div class="post-toc"><div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-导语"><span class="nav-text">一.导语</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-本文的主要内容："><span class="nav-text">1.本文的主要内容：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-准备："><span class="nav-text">2.准备：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二-让谷歌搜索引擎收录我们的站点"><span class="nav-text">二.让谷歌搜索引擎收录我们的站点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三-让百度搜索引擎收录我们的站点"><span class="nav-text">三.让百度搜索引擎收录我们的站点</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-让百度收录我们的站点，两种方式。"><span class="nav-text">1.让百度收录我们的站点，两种方式。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-验证网站所有权"><span class="nav-text">2.验证网站所有权</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-提交sitemap"><span class="nav-text">3.提交sitemap</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四-SEO"><span class="nav-text">四. SEO</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文章"><span class="nav-text">参考文章</span></a></li></ol></div></div></section><div class="back-to-top"><i class="fa fa-arrow-up"></i> <span id="scrollpercent"><span>0</span>%</span></div></div></aside></div></main><footer id="footer" class="footer"><div class="footer-inner"><script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div class="copyright"><i class="fa fa-user-md"></i> <span id="busuanzi_container_site_uv">本站访客数:<span id="busuanzi_value_site_uv"></span></span> <span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-area-chart"></i></span> <span class="post-meta-item-text">本站总字数&#58;</span> <span title="本站总字数">274.8k</span></div><div class="powered-by">&copy; 2019 &mdash; <span itemprop="copyrightYear">2020</span><span class="with-love"><i class="fa fa-user"></i></span> <span class="author" itemprop="copyrightHolder">小石头</span></div></div></footer></div><script type="text/javascript">"[object Function]"!==Object.prototype.toString.call(window.Promise)&&(window.Promise=null)</script><script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script><script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script><script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script><script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script><script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script><script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script><script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine/dist/Valine.min.js"></script><script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: '8Wr6djHK9j3sWcrUa0SljIrP-gzGzoHsz',
+        appKey: 'zI5eAMr7Rto1tGdUu1LRRbzY',
+        placeholder: 'Just go go',
+        avatar:'monsterid',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script><script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script><script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script><script>AV.initialize("8Wr6djHK9j3sWcrUa0SljIrP-gzGzoHsz","zI5eAMr7Rto1tGdUu1LRRbzY")</script><script>function showTime(e){var t=new AV.Query(e),c=[],u=$(".leancloud_visitors");u.each(function(){c.push($(this).attr("id").trim())}),t.containedIn("url",c),t.find().done(function(e){var t=".leancloud-visitors-count";if(0!==e.length){for(var n=0;n<e.length;n++){var o=e[n],i=o.get("url"),s=o.get("time"),r=document.getElementById(i);$(r).find(t).text(s)}for(n=0;n<c.length;n++){i=c[n],r=document.getElementById(i);var l=$(r).find(t);""==l.text()&&l.text(0)}}else u.find(t).text(0)}).fail(function(e,t){console.log("Error: "+t.code+" "+t.message)})}function addCount(i){var e=$(".leancloud_visitors"),s=e.attr("id").trim(),r=e.attr("data-flag-title").trim(),t=new AV.Query(i);t.equalTo("url",s),t.find({success:function(e){if(0<e.length){var t=e[0];t.fetchWhenSave(!0),t.increment("time"),t.save(null,{success:function(e){$(document.getElementById(s)).find(".leancloud-visitors-count").text(e.get("time"))},error:function(e,t){console.log("Failed to save Visitor num, with error message: "+t.message)}})}else{var n=new i,o=new AV.ACL;o.setPublicReadAccess(!0),o.setPublicWriteAccess(!0),n.setACL(o),n.set("title",r),n.set("url",s),n.set("time",1),n.save(null,{success:function(e){$(document.getElementById(s)).find(".leancloud-visitors-count").text(e.get("time"))},error:function(e,t){console.log("Failed to create")}})}},error:function(e){console.log("Error:"+e.code+" "+e.message)}})}$(function(){var e=AV.Object.extend("Counter");1==$(".leancloud_visitors").length?addCount(e):1<$(".post-title-link").length&&showTime(e)})</script><script>!function(){var t=document.createElement("script"),e=window.location.protocol.split(":")[0];t.src="https"===e?"https://zz.bdstatic.com/linksubmit/push.js":"http://push.zhanzhang.baidu.com/push.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}()</script><script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script><script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script><script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><script type="text/javascript" src="/js/src/love.js"></script></body></html>
