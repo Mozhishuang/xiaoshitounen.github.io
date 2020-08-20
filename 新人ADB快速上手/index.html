@@ -1,0 +1,348 @@
+<!DOCTYPE html><html class="theme-next pisces use-motion" lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta name="theme-color" content="#222"><script src="/lib/pace/pace.min.js?v=1.0.2"></script><link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"><link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css"><link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css"><link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4"><link rel="icon" type="image/png" sizes="32x32" href="https://xl-head-portrait-1300729795.cos.ap-chengdu.myqcloud.com/favicon.ico?v=5.1.4"><link rel="icon" type="image/png" sizes="16x16" href="https://xl-head-portrait-1300729795.cos.ap-chengdu.myqcloud.com/favicon.ico?v=5.1.4"><link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222"><meta name="keywords" content="工具,"><link rel="alternate" href="/atom.xml" title="小石头's Blog" type="application/atom+xml"><meta name="description" content="背景1.关于ADB ADB是一个 客户端-服务器端 程序, 其中客户端是你用来操作的电脑, 服务器端是android设备。  ADB—Andorid Debug Bridge，它其实是一个命令行窗口，用于通过电脑端与模拟器或者真实设备交互。在某些特殊的情况下进入不了系统，adb就派上用场啦！  我面临的使用场景：覆盖率数据不接受debug测试包的数据上报，所以我必须使用release包测试。拿到一"><meta property="og:type" content="article"><meta property="og:title" content="新人ADB快速上手"><meta property="og:url" content="http://fanandjiu.com/%E6%96%B0%E4%BA%BAADB%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/index.html"><meta property="og:site_name" content="小石头&#39;s Blog"><meta property="og:description" content="背景1.关于ADB ADB是一个 客户端-服务器端 程序, 其中客户端是你用来操作的电脑, 服务器端是android设备。  ADB—Andorid Debug Bridge，它其实是一个命令行窗口，用于通过电脑端与模拟器或者真实设备交互。在某些特殊的情况下进入不了系统，adb就派上用场啦！  我面临的使用场景：覆盖率数据不接受debug测试包的数据上报，所以我必须使用release包测试。拿到一"><meta property="og:image" content="https://bytedance-1300729795.cos.ap-guangzhou.myqcloud.com/ADB/1.png"><meta property="og:image" content="https://bytedance-1300729795.cos.ap-guangzhou.myqcloud.com/ADB/2.png"><meta property="og:image" content="https://bytedance-1300729795.cos.ap-guangzhou.myqcloud.com/ADB/3.png"><meta property="og:image" content="https://bytedance-1300729795.cos.ap-guangzhou.myqcloud.com/ADB/4.png"><meta property="og:image" content="https://bytedance-1300729795.cos.ap-guangzhou.myqcloud.com/ADB/5.png"><meta property="og:image" content="https://bytedance-1300729795.cos.ap-guangzhou.myqcloud.com/ADB/6.png"><meta property="og:image" content="https://bytedance-1300729795.cos.ap-guangzhou.myqcloud.com/ADB/7.png"><meta property="og:image" content="https://bytedance-1300729795.cos.ap-guangzhou.myqcloud.com/ADB/8.png"><meta property="og:image" content="https://bytedance-1300729795.cos.ap-guangzhou.myqcloud.com/ADB/9.png"><meta property="og:image" content="https://bytedance-1300729795.cos.ap-guangzhou.myqcloud.com/ADB/10.png"><meta property="og:image" content="https://bytedance-1300729795.cos.ap-guangzhou.myqcloud.com/ADB/11.png"><meta property="og:image" content="https://bytedance-1300729795.cos.ap-guangzhou.myqcloud.com/ADB/12.png"><meta property="og:image" content="https://bytedance-1300729795.cos.ap-guangzhou.myqcloud.com/ADB/13.png"><meta property="og:image" content="https://bytedance-1300729795.cos.ap-guangzhou.myqcloud.com/ADB/14.png"><meta property="article:published_time" content="2020-08-19T06:23:40.000Z"><meta property="article:modified_time" content="2020-08-19T06:39:36.712Z"><meta property="article:author" content="小石头"><meta property="article:tag" content="工具"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://bytedance-1300729795.cos.ap-guangzhou.myqcloud.com/ADB/1.png"><script type="text/javascript" id="hexo.configurations">var NexT=window.NexT||{},CONFIG={root:"/",scheme:"Pisces",version:"5.1.4",sidebar:{position:"left",display:"post",offset:0,b2t:!0,scrollpercent:!0,onmobile:!0},fancybox:!0,tabs:!0,motion:{enable:!0,async:!1,transition:{post_block:"fadeIn",post_header:"slideDownIn",post_body:"slideDownIn",coll_header:"slideLeftIn",sidebar:"slideUpIn"}},duoshuo:{userId:"0",author:"博主"},algolia:{applicationID:"",apiKey:"",indexName:"",hits:{per_page:10},labels:{input_placeholder:"Search for Posts",hits_empty:"We didn't find any results for the search: ${query}",hits_stats:"${hits} results found in ${time} ms"}}}</script><link rel="canonical" href="http://fanandjiu.com/新人ADB快速上手/"><title>新人ADB快速上手 | 小石头's Blog</title><meta name="generator" content="Hexo 4.2.1"></head><body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans"><div class="container sidebar-position-left page-post-detail"><div class="headband"></div><header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="header-inner"><div class="site-brand-wrapper"><div class="site-meta"><div class="custom-logo-site-title"><a href="/" class="brand" rel="start"><span class="logo-line-before"><i></i></span> <span class="site-title">小石头's Blog</span><span class="logo-line-after"><i></i></span></a></div><p class="site-subtitle">成功来源于每一次的坚持</p></div><div class="site-nav-toggle"> <button><span class="btn-bar"></span><span class="btn-bar"></span><span class="btn-bar"></span></button></div></div><nav class="site-nav"><ul id="menu" class="menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i><br> 首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i><br> 标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i><br> 分类</a></li><li class="menu-item menu-item-search"><a href="javascript:;" class="popup-trigger"><i class="menu-item-icon fa fa-search fa-fw"></i><br> 搜索</a></li></ul><div class="site-search"><div class="popup search-popup local-search-popup"><div class="local-search-header clearfix"><span class="search-icon"><i class="fa fa-search"></i></span><span class="popup-btn-close"><i class="fa fa-times-circle"></i></span><div class="local-search-input-wrapper"> <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input"></div></div><div id="local-search-result"></div></div></div></nav></div></header><main id="main" class="main"><div class="main-inner"><div class="content-wrap"><div id="content" class="content"><div id="posts" class="posts-expand"><article class="post post-type-normal" itemscope itemtype="http://schema.org/Article"><div class="post-block"><link itemprop="mainEntityOfPage" href="http://fanandjiu.com/%E6%96%B0%E4%BA%BAADB%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="name" content="小石头"><meta itemprop="description" content=""><meta itemprop="image" content="https://xl-head-portrait-1300729795.cos.ap-chengdu.myqcloud.com/acatar.jpg"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="小石头's Blog"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">新人ADB快速上手</h1><div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i></span> <span class="post-meta-item-text">发表于</span> <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-08-19T14:23:40+08:00">2020-08-19</time></span> <span class="post-category"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-folder-o"></i></span> <span class="post-meta-item-text">分类于</span> <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index"><span itemprop="name">工具</span></a></span></span> <span class="post-comments-count"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-comment-o"></i></span><a href="/%E6%96%B0%E4%BA%BAADB%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/%E6%96%B0%E4%BA%BAADB%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/" itemprop="commentCount"></span></a></span> <span id="/%E6%96%B0%E4%BA%BAADB%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/" class="leancloud_visitors" data-flag-title="新人ADB快速上手"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-eye"></i></span> <span class="post-meta-item-text">热度&#58;</span><span class="leancloud-visitors-count"></span> <span>℃</span></span><div class="post-wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span> <span class="post-meta-item-text">字数统计&#58;</span> <span title="字数统计">686 字</span> <span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span> <span class="post-meta-item-text">阅读时长 &asymp;</span> <span title="阅读时长">2 分钟</span></div></div></header><div class="post-body" itemprop="articleBody"><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><h3 id="1-关于ADB"><a href="#1-关于ADB" class="headerlink" title="1.关于ADB"></a>1.关于ADB</h3><ul><li><p><strong>ADB</strong>是一个 客户端-服务器端 程序, 其中客户端是你用来操作的电脑, 服务器端是android设备。</p></li><li><p><strong>ADB</strong>—Andorid Debug Bridge，它其实是一个命令行窗口，用于通过电脑端与模拟器或者真实设备交互。在某些特殊的情况下进入不了系统，adb就派上用场啦！</p></li><li><p>我面临的使用场景：覆盖率数据不接受debug测试包的数据上报，所以我必须使用release包测试。拿到一个release包如何查看日志呢？这个时候就驱动我去学习adb了。</p></li></ul><h3 id="2-ADB用法大全"><a href="#2-ADB用法大全" class="headerlink" title="2.ADB用法大全"></a>2.ADB用法大全</h3><p><a href="https://github.com/mzlogin/awesome-adb" target="_blank" rel="noopener">https://github.com/mzlogin/awesome-adb</a></p><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="1-测试是否安装"><a href="#1-测试是否安装" class="headerlink" title="1.测试是否安装"></a>1.测试是否安装</h3><p>输入以下命令，查看adb的版本：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb version</span><br></pre></td></tr></table></figure><p>如果出现类似下面的情况，证明已经安装了：</p><p><img src="https://bytedance-1300729795.cos.ap-guangzhou.myqcloud.com/ADB/1.png" alt="img"></p><h3 id="2-安装"><a href="#2-安装" class="headerlink" title="2.安装"></a>2.安装</h3><p>详细参考简书猿二胖，具体链接为<a href="https://www.jianshu.com/p/229dbd25b661" target="_blank" rel="noopener">https://www.jianshu.com/p/229dbd25b661</a></p><p>我是直接使用下面的命令，然后检测是否安装成功即可：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew cask install android-platform-tools</span><br></pre></td></tr></table></figure><h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><h3 id="1-查看连接的设备"><a href="#1-查看连接的设备" class="headerlink" title="1.查看连接的设备"></a>1.查看连接的设备</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb devices</span><br></pre></td></tr></table></figure><p><img src="https://bytedance-1300729795.cos.ap-guangzhou.myqcloud.com/ADB/2.png" alt="img"></p><h3 id="2-安装apk"><a href="#2-安装apk" class="headerlink" title="2.安装apk"></a>2.安装apk</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb install &lt;Mac上apk的路径&gt;</span><br></pre></td></tr></table></figure><p><img src="https://bytedance-1300729795.cos.ap-guangzhou.myqcloud.com/ADB/3.png" alt="img"></p><blockquote><p>Mac上获取apk路径的小技巧：直接将一个apk文件拖到终端，终端就会出现apk的路径</p></blockquote><h3 id="3-卸载apk"><a href="#3-卸载apk" class="headerlink" title="3.卸载apk"></a>3.卸载apk</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb uninstall &lt;包名&gt;</span><br></pre></td></tr></table></figure><p><img src="https://bytedance-1300729795.cos.ap-guangzhou.myqcloud.com/ADB/4.png" alt="img"></p><h3 id="4-获取包名"><a href="#4-获取包名" class="headerlink" title="4.获取包名"></a>4.获取包名</h3><p>查看所有app的包名</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb shell pm list packages</span><br></pre></td></tr></table></figure><p>查看所有系统app的包名</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb shell pm list packages -s</span><br></pre></td></tr></table></figure><p>查看所有第三方app的包名</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb shell pm list packages -3</span><br></pre></td></tr></table></figure><p>使用grep过滤查看满足要求的app包名</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb shell pm list packages | grep &lt;条件&gt;</span><br></pre></td></tr></table></figure><p><img src="https://bytedance-1300729795.cos.ap-guangzhou.myqcloud.com/ADB/5.png" alt="img"></p><h3 id="5-清除应用数据"><a href="#5-清除应用数据" class="headerlink" title="5.清除应用数据"></a>5.清除应用数据</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb shell pm clear</span><br></pre></td></tr></table></figure><blockquote><p>当你只是想要清除一个apk的某些数据来复现某些操作的时候，这个命令就显得尤为重要。它可以避免我们重装apk来完成这个操作。</p></blockquote><h3 id="6-查看日志"><a href="#6-查看日志" class="headerlink" title="6.查看日志"></a>6.查看日志</h3><p>打印 Android 的系统日志</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb logcat</span><br></pre></td></tr></table></figure><p>清除日志</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb logcat -c</span><br></pre></td></tr></table></figure><p>过滤日志</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb logcat | grep &quot;tag&quot;</span><br></pre></td></tr></table></figure><blockquote><p>这里的tag就是你打日志的时候需要设置的第一个参数TAG，通过TAG我们可以很轻松的过滤出我们想要的日志，轻松高效。</p></blockquote><p><img src="https://bytedance-1300729795.cos.ap-guangzhou.myqcloud.com/ADB/6.png" alt="img"></p><h3 id="7-查看设备信息"><a href="#7-查看设备信息" class="headerlink" title="7.查看设备信息"></a>7.查看设备信息</h3><p>① 查看序列号</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb get-serialno</span><br></pre></td></tr></table></figure><p><img src="https://bytedance-1300729795.cos.ap-guangzhou.myqcloud.com/ADB/7.png" alt="img"></p><p>② 查看Mac地址（需要权限）</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb shell cat &#x2F;sys&#x2F;class&#x2F;net&#x2F;wlan0&#x2F;address</span><br></pre></td></tr></table></figure><p><img src="https://bytedance-1300729795.cos.ap-guangzhou.myqcloud.com/ADB/8.png" alt="img"></p><p>③ 查看设备型号</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb shell getprop ro.product.model</span><br></pre></td></tr></table></figure><p><img src="https://bytedance-1300729795.cos.ap-guangzhou.myqcloud.com/ADB/9.png" alt="img"></p><p>④ 查看设备的android版本</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb shell getprop ro.build.version.release</span><br></pre></td></tr></table></figure><p><img src="https://bytedance-1300729795.cos.ap-guangzhou.myqcloud.com/ADB/10.png" alt="img"></p><p>⑤ 查看屏幕分辨率</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb shell wm size</span><br></pre></td></tr></table></figure><p><img src="https://bytedance-1300729795.cos.ap-guangzhou.myqcloud.com/ADB/11.png" alt="img"></p><p>⑥ 查看屏幕密度</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb shell wm density</span><br></pre></td></tr></table></figure><p><img src="https://bytedance-1300729795.cos.ap-guangzhou.myqcloud.com/ADB/12.png" alt="img"></p><h2 id="ADB-IDEA"><a href="#ADB-IDEA" class="headerlink" title="ADB IDEA"></a>ADB IDEA</h2><p>AS 插件 ADB IDEA ，装了这款插件可以直接在 AS 中快速操作一些 ADB 命令。</p><p>使用方式：</p><p>① 双击shift-&gt;点击action-&gt;搜索adb</p><p><img src="https://bytedance-1300729795.cos.ap-guangzhou.myqcloud.com/ADB/13.png" alt="img"></p><p>② Ctrl + Shift + A，快捷键直接调用</p><p><img src="https://bytedance-1300729795.cos.ap-guangzhou.myqcloud.com/ADB/14.png" alt="img"></p></div><div><div style="padding:10px 0;margin:20px auto;width:90%;text-align:center"><div>Donate comment here</div> <button id="rewardButton" disable="enable" onclick='var qr=document.getElementById("QR");"none"===qr.style.display?qr.style.display="block":qr.style.display="none"'> <span>打赏</span></button><div id="QR" style="display:none"><div id="wechat" style="display:inline-block"> <img id="wechat_qr" src="/images/wechatpay.jpg" alt="小石头 微信支付"><p>微信支付</p></div><div id="alipay" style="display:inline-block"> <img id="alipay_qr" src="/images/alipay.jpg" alt="小石头 支付宝"><p>支付宝</p></div></div></div></div><div><div class="my_post_copyright"><script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script><script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script><script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script><p><span>本文标题:</span><a href="/%E6%96%B0%E4%BA%BAADB%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/">新人ADB快速上手</a></p><p><span>文章作者:</span><a href="/" title="访问 小石头 的个人博客">小石头</a></p><p><span>发布时间:</span>2020年08月19日 - 14:23</p><p><span>最后更新:</span>2020年08月19日 - 14:39</p><p><span>原始链接:</span><a href="/%E6%96%B0%E4%BA%BAADB%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/" title="新人ADB快速上手">http://fanandjiu.com/%E6%96%B0%E4%BA%BAADB%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/</a><span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://fanandjiu.com/%E6%96%B0%E4%BA%BAADB%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/" aria-label="复制成功！"></i></span></p><p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p></div><script>var clipboard=new Clipboard(".fa-clipboard");$(".fa-clipboard").click(function(){clipboard.on("success",function(){swal({title:"",text:"复制成功",icon:"success",showConfirmButton:!0})})})</script></div><div><div><div style="text-align:center;color:#ccc;font-size:14px"> -------------本文结束<i class="fa fa-paw"></i> 感谢您的阅读-------------</div></div></div><footer class="post-footer"><div class="post-tags"><a href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag"><i class="fa fa-tag"></i> 工具</a></div><div class="post-nav"><div class="post-nav-next post-nav-item"><a href="/Git0%E5%9F%BA%E7%A1%80%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/" rel="next" title="新人零基础Git快速上手"><i class="fa fa-chevron-left"></i> 新人零基础Git快速上手</a></div><span class="post-nav-divider"></span><div class="post-nav-prev post-nav-item"></div></div></footer></div></article><div class="post-spread"></div></div></div><div class="comments" id="comments"></div></div><div class="sidebar-toggle"><div class="sidebar-toggle-line-wrap"><span class="sidebar-toggle-line sidebar-toggle-line-first"></span><span class="sidebar-toggle-line sidebar-toggle-line-middle"></span><span class="sidebar-toggle-line sidebar-toggle-line-last"></span></div></div><aside id="sidebar" class="sidebar"><div id="sidebar-dimmer"></div><div class="sidebar-inner"><ul class="sidebar-nav motion-element"><li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap"> 文章目录</li><li class="sidebar-nav-overview" data-target="site-overview-wrap"> 站点概览</li></ul><section class="site-overview-wrap sidebar-panel"><div class="site-overview"><div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person"> <img class="site-author-image" itemprop="image" src="https://xl-head-portrait-1300729795.cos.ap-chengdu.myqcloud.com/acatar.jpg" alt="小石头"><p class="site-author-name" itemprop="name">小石头</p><p class="site-description motion-element" itemprop="description">Life = Coding</p></div><nav class="site-state motion-element"><div class="site-state-item site-state-posts"> <a href="/archives"><span class="site-state-item-count">242</span> <span class="site-state-item-name">日志</span></a></div><div class="site-state-item site-state-categories"> <a href="/categories/index.html"><span class="site-state-item-count">14</span> <span class="site-state-item-name">分类</span></a></div><div class="site-state-item site-state-tags"> <a href="/tags/index.html"><span class="site-state-item-count">30</span> <span class="site-state-item-name">标签</span></a></div></nav><div class="feed-link motion-element"><a href="/atom.xml" rel="alternate"><i class="fa fa-rss"></i> RSS</a></div><div class="links-of-author motion-element"><span class="links-of-author-item"><a href="https://github.com/xiaoshitounen" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i> GitHub</a></span><span class="links-of-author-item"><a href="https://gitee.com/xuxiaoshi" target="_blank" title="Gitee"><i class="fa fa-fw fa-free-code-camp"></i> Gitee</a></span><span class="links-of-author-item"><a href="https://xiaoshitounen.coding.net/admin/overview" target="_blank" title="Coding"><i class="fa fa-fw fa-file-code-o"></i> Coding</a></span><span class="links-of-author-item"><a href="https://www.jianshu.com/u/031c0a19d4a2" target="_blank" title="简书"><i class="fa fa-fw fa-heartbeat"></i> 简书</a></span></div><div class="links-of-blogroll motion-element links-of-blogroll-block"><div class="links-of-blogroll-title"><i class="fa fa-fw fa-link"></i> 推荐</div> <a href="https://www.showdoc.cc/" title="在线Api文档" target="_blank">在线Api文档</a> <a href="https://www.showdoc.cc/" title="在线作图" target="_blank">在线作图</a> <a href="http://www.atool9.com/colorpicker.php" title="在线颜色选择" target="_blank">在线颜色选择</a> <a href="https://www.iconfont.cn/" title="阿里巴巴矢量图标" target="_blank">阿里巴巴矢量图标</a> <a href="https://www.aconvert.com/cn/" title="在线转换" target="_blank">在线转换</a> <a href="http://tool.chinaz.com/tools/diff" title="文本对比" target="_blank">文本对比</a> <a href="https://www.ubuuk.com/" title="设计" target="_blank">设计</a> <a href="https://www.photopea.com/" title="在线PhotoShop" target="_blank">在线PhotoShop</a> <a href="https://tool.oschina.net/codeformat/json" title="代码格式化" target="_blank">代码格式化</a> <a href="https://smallpdf.com/cn" title="PDF转换" target="_blank">PDF转换</a></div></div></section><section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active"><div class="post-toc"><div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#背景"><span class="nav-text">背景</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-关于ADB"><span class="nav-text">1.关于ADB</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-ADB用法大全"><span class="nav-text">2.ADB用法大全</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-测试是否安装"><span class="nav-text">1.测试是否安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-安装"><span class="nav-text">2.安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命令"><span class="nav-text">命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-查看连接的设备"><span class="nav-text">1.查看连接的设备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-安装apk"><span class="nav-text">2.安装apk</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-卸载apk"><span class="nav-text">3.卸载apk</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-获取包名"><span class="nav-text">4.获取包名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-清除应用数据"><span class="nav-text">5.清除应用数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-查看日志"><span class="nav-text">6.查看日志</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-查看设备信息"><span class="nav-text">7.查看设备信息</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ADB-IDEA"><span class="nav-text">ADB IDEA</span></a></li></ol></div></div></section><div class="back-to-top"><i class="fa fa-arrow-up"></i> <span id="scrollpercent"><span>0</span>%</span></div></div></aside></div></main><footer id="footer" class="footer"><div class="footer-inner"><script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div class="copyright"><i class="fa fa-user-md"></i> <span id="busuanzi_container_site_uv">本站访客数:<span id="busuanzi_value_site_uv"></span></span> <span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-area-chart"></i></span> <span class="post-meta-item-text">本站总字数&#58;</span> <span title="本站总字数">288.7k</span></div><div class="powered-by">&copy; 2019 &mdash; <span itemprop="copyrightYear">2020</span><span class="with-love"><i class="fa fa-user"></i></span> <span class="author" itemprop="copyrightHolder">小石头</span></div></div></footer></div><script type="text/javascript">"[object Function]"!==Object.prototype.toString.call(window.Promise)&&(window.Promise=null)</script><script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script><script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script><script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script><script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script><script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script><script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script><script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine/dist/Valine.min.js"></script><script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: '8Wr6djHK9j3sWcrUa0SljIrP-gzGzoHsz',
+        appKey: 'zI5eAMr7Rto1tGdUu1LRRbzY',
+        placeholder: 'Just go go',
+        avatar:'monsterid',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script><script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script><script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script><script>AV.initialize("8Wr6djHK9j3sWcrUa0SljIrP-gzGzoHsz","zI5eAMr7Rto1tGdUu1LRRbzY")</script><script>function showTime(e){var t=new AV.Query(e),c=[],u=$(".leancloud_visitors");u.each(function(){c.push($(this).attr("id").trim())}),t.containedIn("url",c),t.find().done(function(e){var t=".leancloud-visitors-count";if(0!==e.length){for(var n=0;n<e.length;n++){var o=e[n],i=o.get("url"),s=o.get("time"),r=document.getElementById(i);$(r).find(t).text(s)}for(n=0;n<c.length;n++){i=c[n],r=document.getElementById(i);var l=$(r).find(t);""==l.text()&&l.text(0)}}else u.find(t).text(0)}).fail(function(e,t){console.log("Error: "+t.code+" "+t.message)})}function addCount(i){var e=$(".leancloud_visitors"),s=e.attr("id").trim(),r=e.attr("data-flag-title").trim(),t=new AV.Query(i);t.equalTo("url",s),t.find({success:function(e){if(0<e.length){var t=e[0];t.fetchWhenSave(!0),t.increment("time"),t.save(null,{success:function(e){$(document.getElementById(s)).find(".leancloud-visitors-count").text(e.get("time"))},error:function(e,t){console.log("Failed to save Visitor num, with error message: "+t.message)}})}else{var n=new i,o=new AV.ACL;o.setPublicReadAccess(!0),o.setPublicWriteAccess(!0),n.setACL(o),n.set("title",r),n.set("url",s),n.set("time",1),n.save(null,{success:function(e){$(document.getElementById(s)).find(".leancloud-visitors-count").text(e.get("time"))},error:function(e,t){console.log("Failed to create")}})}},error:function(e){console.log("Error:"+e.code+" "+e.message)}})}$(function(){var e=AV.Object.extend("Counter");1==$(".leancloud_visitors").length?addCount(e):1<$(".post-title-link").length&&showTime(e)})</script><script>!function(){var t=document.createElement("script"),e=window.location.protocol.split(":")[0];t.src="https"===e?"https://zz.bdstatic.com/linksubmit/push.js":"http://push.zhanzhang.baidu.com/push.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}()</script><script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script><script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script><script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><script type="text/javascript" src="/js/src/love.js"></script></body></html>
