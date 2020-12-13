@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://fanandjiu.com/%E7%AE%97%E6%B3%95%E9%A2%98%E8%A7%A3-%E8%AF%95%E9%A2%98-%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83-%E5%A5%87%E5%BC%82%E7%9A%84%E8%99%AB%E7%BE%A4/</loc>
+    <lastmod>2020-12-13</lastmod>
+  </url>
+  <url>
+    <loc>http://fanandjiu.com/Hexo%E9%97%AE%E9%A2%98-Hexo%E5%86%99%E4%BD%9C%E8%AF%AD%E6%B3%95%E6%8C%87%E5%8D%97/</loc>
+    <lastmod>2020-12-13</lastmod>
+  </url>
+  <url>
     <loc>http://fanandjiu.com/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-CentOS/</loc>
     <lastmod>2020-12-12</lastmod>
   </url>
@@ -253,10 +261,6 @@
     <lastmod>2020-06-04</lastmod>
   </url>
   <url>
-    <loc>http://fanandjiu.com/Hexo%E9%97%AE%E9%A2%98-Hexo%E5%86%99%E4%BD%9C%E8%AF%AD%E6%B3%95%E6%8C%87%E5%8D%97/</loc>
-    <lastmod>2020-06-04</lastmod>
-  </url>
-  <url>
     <loc>http://fanandjiu.com/Hexo%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AEnext%E4%B8%BB%E9%A2%98/</loc>
     <lastmod>2020-06-04</lastmod>
   </url>
@@ -434,10 +438,6 @@
   </url>
   <url>
     <loc>http://fanandjiu.com/%E7%AE%97%E6%B3%95%E9%A2%98%E8%A7%A3-%E8%AF%95%E9%A2%98-%E7%AE%97%E6%B3%95%E6%8F%90%E9%AB%98-%E7%A0%94%E7%A9%B6%E5%85%94%E5%AD%90%E7%9A%84%E5%9C%9F%E8%B1%AA/</loc>
-    <lastmod>2020-06-04</lastmod>
-  </url>
-  <url>
-    <loc>http://fanandjiu.com/%E7%AE%97%E6%B3%95%E9%A2%98%E8%A7%A3-%E8%AF%95%E9%A2%98-%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83-%E5%A5%87%E5%BC%82%E7%9A%84%E8%99%AB%E7%BE%A4/</loc>
     <lastmod>2020-06-04</lastmod>
   </url>
   <url>
