@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://fanandjiu.com/link/index.html</loc>
+    <loc>http://fanandjiu.com/Hexo%E9%97%AE%E9%A2%98-%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98Butterfly/</loc>
     
-    <lastmod>2020-12-14</lastmod>
+    <lastmod>2020-12-15</lastmod>
     
   </url>
   
   <url>
-    <loc>http://fanandjiu.com/Hexo%E9%97%AE%E9%A2%98-%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98Butterfly/</loc>
+    <loc>http://fanandjiu.com/link/index.html</loc>
     
-    <lastmod>2020-12-13</lastmod>
+    <lastmod>2020-12-14</lastmod>
     
   </url>
   
@@ -1866,7 +1866,7 @@
   </url>
   
   <url>
-    <loc>http://fanandjiu.com/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/</loc>
+    <loc>http://fanandjiu.com/tags/%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2020-12-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1874,6 +1874,20 @@
   
   <url>
     <loc>http://fanandjiu.com/tags/hexo/</loc>
+    <lastmod>2020-12-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://fanandjiu.com/tags/Markdown/</loc>
+    <lastmod>2020-12-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://fanandjiu.com/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/</loc>
     <lastmod>2020-12-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1894,14 +1908,7 @@
   </url>
   
   <url>
-    <loc>http://fanandjiu.com/tags/%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2020-12-15</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://fanandjiu.com/tags/Markdown/</loc>
+    <loc>http://fanandjiu.com/tags/Kotlin%E9%A1%B9%E7%9B%AE%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2020-12-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1915,14 +1922,14 @@
   </url>
   
   <url>
-    <loc>http://fanandjiu.com/tags/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8/</loc>
+    <loc>http://fanandjiu.com/tags/CentOS/</loc>
     <lastmod>2020-12-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://fanandjiu.com/tags/CentOS/</loc>
+    <loc>http://fanandjiu.com/tags/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8/</loc>
     <lastmod>2020-12-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1936,7 +1943,7 @@
   </url>
   
   <url>
-    <loc>http://fanandjiu.com/tags/Kotlin%E9%A1%B9%E7%9B%AE%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>http://fanandjiu.com/tags/%E6%B4%9B%E8%B0%B7%E9%A2%98%E8%A7%A3/</loc>
     <lastmod>2020-12-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1944,13 +1951,6 @@
   
   <url>
     <loc>http://fanandjiu.com/tags/%E5%8A%9B%E6%89%A3%E9%A2%98%E8%A7%A3/</loc>
-    <lastmod>2020-12-15</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://fanandjiu.com/tags/%E6%B4%9B%E8%B0%B7%E9%A2%98%E8%A7%A3/</loc>
     <lastmod>2020-12-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -2008,7 +2008,7 @@
   </url>
   
   <url>
-    <loc>http://fanandjiu.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/</loc>
+    <loc>http://fanandjiu.com/categories/%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2020-12-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -2022,6 +2022,13 @@
   </url>
   
   <url>
+    <loc>http://fanandjiu.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/</loc>
+    <lastmod>2020-12-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://fanandjiu.com/categories/Java/</loc>
     <lastmod>2020-12-15</lastmod>
     <changefreq>daily</changefreq>
@@ -2029,7 +2036,7 @@
   </url>
   
   <url>
-    <loc>http://fanandjiu.com/categories/%E5%B7%A5%E5%85%B7/</loc>
+    <loc>http://fanandjiu.com/categories/Kotlin%E9%A1%B9%E7%9B%AE%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2020-12-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -2057,7 +2064,7 @@
   </url>
   
   <url>
-    <loc>http://fanandjiu.com/categories/Kotlin%E9%A1%B9%E7%9B%AE%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>http://fanandjiu.com/categories/%E6%B4%9B%E8%B0%B7%E9%A2%98%E8%A7%A3/</loc>
     <lastmod>2020-12-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -2065,13 +2072,6 @@
   
   <url>
     <loc>http://fanandjiu.com/categories/%E5%8A%9B%E6%89%A3%E9%A2%98%E8%A7%A3/</loc>
-    <lastmod>2020-12-15</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://fanandjiu.com/categories/%E6%B4%9B%E8%B0%B7%E9%A2%98%E8%A7%A3/</loc>
     <lastmod>2020-12-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
