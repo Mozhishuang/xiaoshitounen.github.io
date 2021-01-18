@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://182.254.228.71/"/>
-  <updated>2020-12-31T09:34:00.000Z</updated>
+  <updated>2021-01-17T12:38:00.000Z</updated>
   <id>http://182.254.228.71/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>个人生活-2021生活目标</title>
+    <link href="http://182.254.228.71/%E4%B8%AA%E4%BA%BA%E7%94%9F%E6%B4%BB-2021%E7%94%9F%E6%B4%BB%E7%9B%AE%E6%A0%87/"/>
+    <id>http://182.254.228.71/%E4%B8%AA%E4%BA%BA%E7%94%9F%E6%B4%BB-2021%E7%94%9F%E6%B4%BB%E7%9B%AE%E6%A0%87/</id>
+    <published>2021-01-17T12:38:00.000Z</published>
+    <updated>2021-01-17T12:38:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="一-身体锻炼"><a href="#一-身体锻炼" class="headerlink" title="一.身体锻炼"></a>一.身体锻炼</h3><p>参考：<a href="https://www.zhihu.com/question/19931653">如何瘦腿</a></p><h3 id="二-痤疮对待"><a href="#二-痤疮对待" class="headerlink" title="二.痤疮对待"></a>二.痤疮对待</h3><p><strong>长期服用的药物：</strong></p><p><code>维胺酯胶囊</code></p><ul><li>服用点：坚持服用三个月以上，主要用于治疗重，中度痤疮，克制油腻皮肤。</li><li>服用方式：一日三次，每次2粒。</li></ul><p><strong>发炎服用的药物：</strong></p><p><code>盐酸米诺环素胶囊</code></p><ul><li>服用点：内服，</li><li>服用方式：一日两次，每次0.1g(500mg的胶囊*2)，坚持服用6周以上，首次服用需要0.2g。</li></ul><p><code>夫西地酸乳膏</code></p><ul><li>服用点：外服，注意脫皮保护。</li><li>服用方式：早晚各一次，囊肿处涂抹。</li></ul><p><strong>清热解毒：</strong></p><p><code>百癣夏塔热胶囊</code></p><ul><li>服用点：清热解读</li><li>服用方式：一日三次，每次两粒，饭前服用。</li></ul><p><strong>皮肤修复：</strong></p><p><code>可丽金类人胶原蛋白疤痕修复硅凝胶</code></p><ul><li>服用点：祛除疤痕</li><li>服用方式：每天两次，囊肿型好了后立即使用防止留疤，其他疤痕地区也可以使用。</li></ul><p><strong>其他注意：</strong></p><ul><li>辛辣、油炸、高热量、甜的食物，一概拒绝。代表性的火锅、奶茶、巧克力等。</li><li>每天多喝水，保持皮肤不缺水，每天最少8杯水，从起床的第一杯水开始。</li><li>一天8小时，早睡早起不熬夜。</li><li>不要去抠、挤、挑脸上的痘痘。</li><li>合理护肤，合适的洗面奶+护肤水。</li></ul><p><strong>参考：</strong><br><a href="https://www.zhihu.com/question/42651530">服用盐酸米诺环素六周治疗痤疮有何副作用？</a><br><a href="https://www.zhihu.com/question/38554081">囊肿型痘痘怎么消下去？</a><br><a href="https://www.zhihu.com/question/282981125"></a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+    
+      <category term="个人生活" scheme="http://182.254.228.71/tags/%E4%B8%AA%E4%BA%BA%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo-使用Admin插件构建后台</title>
@@ -504,32 +528,6 @@
     
     
       <category term="Android自定义View" scheme="http://182.254.228.71/categories/Android%E8%87%AA%E5%AE%9A%E4%B9%89View/"/>
-    
-    
-      <category term="Android" scheme="http://182.254.228.71/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android项目：iMarTen</title>
-    <link href="http://182.254.228.71/Android%E9%A1%B9%E7%9B%AE%EF%BC%9AiMarTen/"/>
-    <id>http://182.254.228.71/Android%E9%A1%B9%E7%9B%AE%EF%BC%9AiMarTen/</id>
-    <published>2020-06-19T12:36:25.000Z</published>
-    <updated>2020-06-19T12:36:25.000Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="一-运行效果以及源码"><a href="#一-运行效果以及源码" class="headerlink" title="一. 运行效果以及源码"></a>一. 运行效果以及源码</h3><h4 id="1-gif图效果"><a href="#1-gif图效果" class="headerlink" title="1.gif图效果"></a>1.gif图效果</h4><p><img src="https://hexo-photo-1300729795.cos.ap-nanjing.myqcloud.com/hexo-article/Android%E9%A1%B9%E7%9B%AE%EF%BC%9AiMarTen/iMar_demo_1.gif" alt=""></p><p><img src="https://hexo-photo-1300729795.cos.ap-nanjing.myqcloud.com/hexo-article/Android%E9%A1%B9%E7%9B%AE%EF%BC%9AiMarTen/iMar_demo_2.gif" alt=""></p><h4 id="2-源码地址"><a href="#2-源码地址" class="headerlink" title="2.源码地址"></a>2.源码地址</h4><p><a href="https://github.com/xiaoshitounen/Underess">https://github.com/xiaoshitounen/Underess</a></p><h3 id="二-主要的思路"><a href="#二-主要的思路" class="headerlink" title="二.主要的思路"></a>二.主要的思路</h3><p>① XLBottomView+ViewPager+Fragment达成：漫威数据和网球数据的分离。</p><p>② TabLayout+ViewPager+Fragment+RecyclerView达成：网格布局和瀑布布局显示的分离。</p><h3 id="三-使用到的技术点"><a href="#三-使用到的技术点" class="headerlink" title="三.使用到的技术点"></a>三.使用到的技术点</h3><p><a href="/Android项目11：图片展示/">Android项目11：图片展示</a></p><p><a href="/Android控件-ViewPager/">Android控件-ViewPager</a></p><p><a href="/Android控件-TabLayout/">Android控件-TabLayout</a></p><p><a href="/Android碎片-Fragment/">Android碎片-Fragment</a></p><p><a href="/自定义View-XLBottomView/">自定义View-XLBottomView</a></p><h3 id="四-配套论文"><a href="#四-配套论文" class="headerlink" title="四. 配套论文"></a>四. 配套论文</h3><p>链接:<a href="https://pan.baidu.com/s/1AKToY490yd125JtQS7kgjw">https://pan.baidu.com/s/1AKToY490yd125JtQS7kgjw</a>  密码:hgtw</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-    
-      <category term="Android项目" scheme="http://182.254.228.71/categories/Android%E9%A1%B9%E7%9B%AE/"/>
     
     
       <category term="Android" scheme="http://182.254.228.71/tags/Android/"/>
