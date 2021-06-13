@@ -1803,6 +1803,13 @@
   </url>
   
   <url>
+    <loc>http://182.254.228.71/tags/Kotlin/</loc>
+    <lastmod>2021-06-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://182.254.228.71/tags/MacOS/</loc>
     <lastmod>2021-06-13</lastmod>
     <changefreq>daily</changefreq>
@@ -1818,13 +1825,6 @@
   
   <url>
     <loc>http://182.254.228.71/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2021-06-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://182.254.228.71/tags/Kotlin/</loc>
     <lastmod>2021-06-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1959,6 +1959,13 @@
   </url>
   
   <url>
+    <loc>http://182.254.228.71/categories/Kotlin/</loc>
+    <lastmod>2021-06-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://182.254.228.71/categories/MacOS/</loc>
     <lastmod>2021-06-13</lastmod>
     <changefreq>daily</changefreq>
@@ -1967,13 +1974,6 @@
   
   <url>
     <loc>http://182.254.228.71/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2021-06-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://182.254.228.71/categories/Kotlin/</loc>
     <lastmod>2021-06-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
